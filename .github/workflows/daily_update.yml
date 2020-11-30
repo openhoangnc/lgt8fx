@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: do-it
         run: |
-          apt install unzip wget jq -y
+          sudo apt install unzip wget jq -y
           
           THIS_VERSION=`curl -s https://raw.githubusercontent.com/openhoangnc/lgt8fx/main/package.json | jq -r '.version'`
           NEW_VERSION=`curl -s https://raw.githubusercontent.com/dbuezas/lgt8fx/master/package_lgt8fx_index.json | jq -r '.packages[0].platforms[0].version'`
